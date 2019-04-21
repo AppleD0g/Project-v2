@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.b00086142.finalproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Fitness App"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".TSApplication"
+        tools:replace="android:label">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.b00086142.finalproject.Activity.HomeActivity" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAI8DGVp2q3Jhyrrrc5801Bt9NBRXWZ-Nw" />
+
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Activity.StopWatchService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".Activity.LogOutActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.SignUpActivity" />
+        <activity android:name=".Activity.ResetPasswordActivity" />
+        <activity
+            android:name=".Activity.HomeActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".Activity.DrawerActivity" />
+        <activity android:name=".Activity.IndexActivity" />
+        <activity android:name=".Activity.WaterActivity" />
+        <activity android:name=".Activity.MapsActivity" />
+        <activity android:name=".Activity.FitActivity" />
+        <activity android:name=".Activity.FinishActivity" />
+        <activity android:name=".Activity.IndividualWalkActivity" />
+        <activity android:name=".Activity.ListOfWalks" />
+        <activity android:name=".Activity.NotifActivity" />
+
+        <receiver android:name=".Activity.AlertReceiver" />
+
+        <activity android:name=".Activity.DrinkHistoryActivity" />
+        <activity android:name=".Activity.StepCountActivity"></activity>
+        <activity android:name=".Activity.train.SportActivity" />
+        <activity android:name=".Activity.train.Step1Activity" />
+        <activity android:name=".Activity.train.Step2Activity" />
+        <activity android:name=".Activity.train.Step3Activity" />
+        <activity android:name=".Activity.train.TrainHistoryActivity"></activity>
+        <activity android:name="com.example.b00086142.recorder.activities.MainActivity" />
+        <activity android:name="com.example.b00086142.recorder.activities.ExportDataActivity" />
+        <activity android:name="com.example.b00086142.recorder.activities.ScanBandActivity" />
+
+        <service
+            android:name="com.example.b00086142.recorder.services.CommService"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+    </application>
+
+</manifest>

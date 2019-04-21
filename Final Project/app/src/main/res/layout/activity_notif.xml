@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="No Alarm set"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_timepicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="open time picker"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="cancel alarm"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/button_drink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Drink History"
+                android:textSize="10sp" />
+            <Button
+                android:id="@+id/button_Train"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Train History"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <lecho.lib.hellocharts.view.LineChartView
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_margin="10dp" />
+
+        <lecho.lib.hellocharts.view.LineChartView
+            android:id="@+id/chartSport"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_margin="10dp" />
+
+        <lecho.lib.hellocharts.view.LineChartView
+            android:id="@+id/chartRate"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_margin="10dp" />
+
+
+    </LinearLayout>
+</ScrollView>
